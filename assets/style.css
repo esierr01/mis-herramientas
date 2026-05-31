@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    background-color: #0d0f14;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+        color: #2ecc71;
+    }
+
+    p {
+        font-size: 0.9rem;
+        margin: 0;
+        color: #ecf0f1;
+    }
+
+    .cards {
+        margin-top: 3rem;
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        /* Cambié 400px a 280px para que sea responsive en móviles */
+        /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+        grid-template-columns: 1fr;
+        /* para mostrar una sola card por linea */
+        gap: 2rem;
+        padding: 2px;
+
+        .card {
+            background-color: #2c2f36a2;
+            border-radius: 20px;
+            padding: 0.2rem 1rem;
+
+            .card-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: start;
+                padding-left: 23px;
+
+                h2 {
+                    color: #ffffff;
+                    font-size: 1.2rem;
+                    margin: 0;
+                }
+
+                .guion {
+                    background: radial-gradient(circle at top, #112a44 0%, #152b42 58%, #010203 100%);
+                    height: 8px;
+                    width: 190px;
+                    margin-right: 26px;
+                    border-radius: 10px;
+                }
+            }
+
+            .shortcuts-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                place-items: center;
+                gap: 12px;
+                padding: 10px;
+
+                a {
+                    width: 80px;
+                    min-width: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    padding: 0.5rem;
+                    border: 1px solid #363c47;
+                    box-shadow: 0 0 10px #000000;
+                    border-radius: 20px;
+                    transition: all 0.3s ease-in-out;
+                    /* Moví la transición al estado normal */
+
+                    .icon svg {
+                        background-color: #697c71;
+                        padding: 6px;
+                        border-radius: 10px;
+                        color: #000000;
+                        transition: all 0.3s ease-in-out;
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    .info .title {
+                        color: rgb(94, 87, 87);
+                        margin-top: 8px;
+                        /* Añadido para que no esté pegado al ícono */
+                        text-align: center;
+                        font-size: 0.75rem;
+                    }
+
+                    &:hover {
+                        background-color: #232831;
+                        border-color: #2ecc71;
+                        box-shadow: 0 0 10px #2ecc71;
+                        color: #2ecc71;
+
+                        .icon svg {
+                            background-color: #2ecc71;
+                            color: #ffffff;
+                        }
+
+                        .info .title {
+                            color: #2ecc71;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
