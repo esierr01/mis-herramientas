@@ -6,7 +6,7 @@ export const shortcutSegments = [
             {
                 title: "YouTube",
                 url: "https://www.youtube.com/",
-                icon: `/assets/icons/youtube.svg`
+                icon: `./assets/icons/youtube.svg`
             },
             {
                 title: "CURSOS",
