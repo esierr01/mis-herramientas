@@ -33,10 +33,7 @@ html {
         width: 100%;
         max-width: 1200px;
         display: grid;
-        /* Cambié 400px a 280px para que sea responsive en móviles */
-        /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
         grid-template-columns: 1fr;
-        /* para mostrar una sola card por linea */
         gap: 2rem;
         padding: 2px;
 
@@ -59,9 +56,9 @@ html {
                 }
 
                 .guion {
-                    background: radial-gradient(circle at top, #112a44 0%, #152b42 58%, #010203 100%);
-                    height: 8px;
-                    width: 190px;
+                    background: radial-gradient(circle at top, #112a44 0%, #152b42 58%, #12202e 100%);
+                    height: 6px;
+                    width: 490px;
                     margin-right: 26px;
                     border-radius: 10px;
                 }
@@ -69,14 +66,14 @@ html {
 
             .shortcuts-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
                 place-items: center;
-                gap: 12px;
+                gap: 14px;
                 padding: 10px;
 
                 a {
-                    width: 80px;
-                    min-width: 80px;
+                    width: 60px;
+                    min-width: 60px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -87,24 +84,22 @@ html {
                     box-shadow: 0 0 10px #000000;
                     border-radius: 20px;
                     transition: all 0.3s ease-in-out;
-                    /* Moví la transición al estado normal */
+                    ;
 
-                    .icon svg {
-                        background-color: #697c71;
-                        padding: 6px;
-                        border-radius: 10px;
-                        color: #000000;
+                    img.icon {
+                        width: 28px;
+                        height: 28px;
+                        object-fit: contain;
                         transition: all 0.3s ease-in-out;
-                        width: 24px;
-                        height: 24px;
                     }
 
                     .info .title {
-                        color: rgb(94, 87, 87);
-                        margin-top: 8px;
+                        color: rgb(143, 136, 136);
+                        margin-top: 6px;
                         /* Añadido para que no esté pegado al ícono */
                         text-align: center;
-                        font-size: 0.75rem;
+                        font-size: 0.6rem;
+                        text-transform: capitalize;
                     }
 
                     &:hover {

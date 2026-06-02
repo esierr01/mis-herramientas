@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="512" height="512" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="356.769" y1="1499.912" x2="141.269" y2="918.412" gradientTransform="translate(0 -972)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset="1" stop-color="#333"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="137.3" y1="287.255" x2="262.679" y2="287.255" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f16755"/>
+      <stop offset="1" stop-color="#e52f76"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="141.305" y1="192.503" x2="374.7" y2="192.503" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <g id="boxicons">
+    <g id="Font_Awesome_6.0" data-name="Font Awesome 6.0">
+      <g id="Overflow_Controller_Icon" data-name="Overflow Controller Icon">
+        <g id="Layer_2-2" data-name="Layer 2-2">
+          <g id="Style_Searchbox_Results_Icon" data-name="Style Searchbox Results Icon">
+            <g id="Layer_3" data-name="Layer 3">
+              <circle class="cls-1" cx="256" cy="256" r="256"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Boxicons">
+      <path class="cls-2" d="M141.613,189.102c-2.772,4.313-4.313,9.242-4.313,14.171v107.203c0,7.393,4.005,14.479,10.474,18.175l97.037,55.142c8.009,4.621,17.867-1.232,17.867-10.474v-114.905h0l-121.066-69.312Z"/>
+      <path class="cls-3" d="M262.679,258.414l105.355-52.986c8.626-4.313,8.934-16.327.616-20.948l-96.421-55.142c-6.161-3.389-13.554-3.697-19.716-.616l-100.426,50.829c-4.313,2.156-8.009,5.545-10.782,9.55l121.374,69.312Z"/>
+    </g>
+  </g>
+</svg>

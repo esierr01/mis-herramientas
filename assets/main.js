@@ -4,7 +4,6 @@ function renderCards() {
     const container = document.querySelector('.cards');
     if (!container) return;
 
-    // Generamos todo el HTML usando map y plantillas literales
     const html = shortcutSegments.map(segment => `
         <article class="card" data-segment="${segment.id}">
             <header class="card-header">
@@ -14,7 +13,8 @@ function renderCards() {
             <div class="shortcuts-grid">
                 ${segment.shortcuts.map(shortcut => `
                     <a href="${shortcut.url}" target="_blank" rel="noopener noreferrer" class="shortcut" title="${shortcut.title}">
-                        <span class="icon">${shortcut.icon}</span>
+                        <!-- Cambiamos el span por una etiqueta img -->
+                        <img class="icon" src="${shortcut.icon}" alt="${shortcut.title}">
                         <div class="info">
                             <span class="title">${shortcut.title}</span>
                         </div>
@@ -24,7 +24,6 @@ function renderCards() {
         </article>
     `).join('');
 
-    // Inyectamos el HTML (al hacerlo una sola vez, el reflow es mínimo, similar al Fragment)
     container.innerHTML = html;
 }
 
