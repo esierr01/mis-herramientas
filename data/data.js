@@ -113,6 +113,11 @@ export const shortcutSegments = [
                 icon: `./assets/icons/kimi.svg`
             },
             {
+                title: "MiniMax",
+                url: "https://agent.minimax.io/",
+                icon: `./assets/icons/minimax.svg`
+            },
+            {
                 title: "Lovable",
                 url: "https://lovable.dev/dashboard",
                 icon: `./assets/icons/lovable.svg`
@@ -121,6 +126,11 @@ export const shortcutSegments = [
                 title: "Stich",
                 url: "https://stitch.withgoogle.com/?pli=1",
                 icon: `./assets/icons/stich.svg`
+            },
+            {
+                title: "NoteBookLM",
+                url: "https://notebooklm.google.com/?icid=home_maincta&original_referer=https:%2F%2Fnotebooklm.google%23&pli=1",
+                icon: `./assets/icons/notebooklm.svg`
             },
         ]
     },
@@ -133,6 +143,11 @@ export const shortcutSegments = [
                 title: "Netlify",
                 url: "https://app.netlify.com/teams/esierr01/projects",
                 icon: `./assets/icons/netlify.svg`
+            },
+            {
+                title: "ImageKit",
+                url: "https://imagekit.io/dashboard/media-library",
+                icon: `./assets/icons/imagekit.svg`
             },
             {
                 title: "GitHub",
@@ -203,6 +218,21 @@ export const shortcutSegments = [
                 title: "FlatUIColors",
                 url: "https://flatuicolors.com/",
                 icon: `./assets/icons/flatuicolors.svg`
+            },
+            {
+                title: "UiGradients",
+                url: "https://uigradients.com/#Moonwalker",
+                icon: `./assets/icons/gradiente.svg`
+            },
+            {
+                title: "CSSGrid",
+                url: "https://cssgrid-generator.netlify.app/",
+                icon: `./assets/icons/gridcss.svg`
+            },
+            {
+                title: "CSSLayout",
+                url: "https://layout.bradwoods.io/",
+                icon: `./assets/icons/csslayout.svg`
             },
         ]
     },
