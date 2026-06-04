@@ -71,7 +71,7 @@ export const shortcutSegments = [
                 icon: `./assets/icons/correoCANTV.svg`
             },
             {
-                title: "HCM-CANTV",
+                title: "HCM",
                 url: "https://saludenlinea.cantv.com.ve/login",
                 icon: `./assets/icons/hcm.svg`
             },
