@@ -170,6 +170,11 @@ export const shortcutSegments = [
                 icon: `./assets/icons/dbdiagram.svg`
             },
             {
+                title: "Wireframe",
+                url: "https://mydraft.cc/",
+                icon: `./assets/icons/wireframe.svg`
+            },
+            {
                 title: "FontAwesome",
                 url: "https://fontawesome.com/search?ic=free-collection",
                 icon: `./assets/icons/fontawesome.svg`
