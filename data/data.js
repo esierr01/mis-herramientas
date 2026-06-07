@@ -4,14 +4,24 @@ export const shortcutSegments = [
         name: "Personales",
         shortcuts: [
             {
-                title: "YouTube",
-                url: "https://www.youtube.com/",
+                title: "Personal",
+                url: "separador",
                 icon: `./assets/icons/youtube.svg`
             },
             {
-                title: "CURSOS",
-                url: "https://www.cursosdev.com/coupons/Spanish",
-                icon: `./assets/icons/cursos.svg`
+                title: "Trello",
+                url: "https://trello.com/u/emmanuelsierra6/boards",
+                icon: `./assets/icons/trello.svg`
+            },
+            {
+                title: "Redes Sociales",
+                url: "separador",
+                icon: `./assets/icons/youtube.svg`
+            },
+            {
+                title: "YouTube",
+                url: "https://www.youtube.com/",
+                icon: `./assets/icons/youtube.svg`
             },
             {
                 title: "WhatsApp",
@@ -34,22 +44,25 @@ export const shortcutSegments = [
                 icon: `./assets/icons/instagram.svg`
             },
             {
+                title: "Educación",
+                url: "separador",
+                icon: `./assets/icons/youtube.svg`
+            },
+            {
+                title: "CURSOS",
+                url: "https://www.cursosdev.com/coupons/Spanish",
+                icon: `./assets/icons/cursos.svg`
+            },
+            {
                 title: "UNETI",
                 url: "https://www.uneti.edu.ve/campus/login/index.php",
                 icon: `./assets/icons/uneti.svg`
             },
             {
-                title: "Trello",
-                url: "https://trello.com/u/emmanuelsierra6/boards",
-                icon: `./assets/icons/trello.svg`
-            }
-        ]
-    },
-
-    {
-        id: "trabajo",
-        name: "Trabajo",
-        shortcuts: [
+                title: "CANTV",
+                url: "separador",
+                icon: `./assets/icons/youtube.svg`
+            },
             {
                 title: "DATATRAFIC",
                 url: "http://161.196.113.242/test_carlos/index.php",
@@ -79,7 +92,7 @@ export const shortcutSegments = [
                 title: "BCV",
                 url: "https://www.bcv.org.ve/",
                 icon: `./assets/icons/bcv.svg`
-            }
+            },
         ]
     },
 
@@ -87,6 +100,11 @@ export const shortcutSegments = [
         id: "ia",
         name: "IA",
         shortcuts: [
+            {
+                title: "IA",
+                url: "separador",
+                icon: `./assets/icons/youtube.svg`
+            },
             {
                 title: "Gemini",
                 url: "https://gemini.google.com/app?hl=es_419",
@@ -136,23 +154,45 @@ export const shortcutSegments = [
     },
 
     {
-        id: "developer",
-        name: "Developer",
+        id: "developer1",
+        name: "Developer1",
         shortcuts: [
+            {
+                title: "Despliegue",
+                url: "separador",
+                icon: `./assets/icons/youtube.svg`
+            },
             {
                 title: "Netlify",
                 url: "https://app.netlify.com/teams/esierr01/projects",
                 icon: `./assets/icons/netlify.svg`
             },
             {
+                title: "GitHub",
+                url: "https://github.com/esierr01",
+                icon: `./assets/icons/github.svg`
+            },
+            {
+                title: "BASS",
+                url: "separador",
+                icon: `./assets/icons/youtube.svg`
+            },
+            {
                 title: "ImageKit",
                 url: "https://imagekit.io/dashboard/media-library",
                 icon: `./assets/icons/imagekit.svg`
             },
+        ]
+    },
+
+    {
+        id: "developer2",
+        name: "Developer2",
+        shortcuts: [
             {
-                title: "GitHub",
-                url: "https://github.com/esierr01",
-                icon: `./assets/icons/github.svg`
+                title: "Diseño",
+                url: "separador",
+                icon: `./assets/icons/youtube.svg`
             },
             {
                 title: "MermaidChart",
@@ -173,6 +213,11 @@ export const shortcutSegments = [
                 title: "Wireframe",
                 url: "https://mydraft.cc/",
                 icon: `./assets/icons/wireframe.svg`
+            },
+            {
+                title: "Iconos",
+                url: "separador",
+                icon: `./assets/icons/youtube.svg`
             },
             {
                 title: "FontAwesome",
@@ -205,6 +250,11 @@ export const shortcutSegments = [
                 icon: `./assets/icons/icon-icons.svg`
             },
             {
+                title: "Colores",
+                url: "separador",
+                icon: `./assets/icons/youtube.svg`
+            },
+            {
                 title: "w3schools",
                 url: "https://www.w3schools.com/colors/colors_picker.asp",
                 icon: `./assets/icons/w3schools.svg`
@@ -228,6 +278,11 @@ export const shortcutSegments = [
                 title: "UiGradients",
                 url: "https://uigradients.com/#Moonwalker",
                 icon: `./assets/icons/gradiente.svg`
+            },
+            {
+                title: "Maquetación",
+                url: "separador",
+                icon: `./assets/icons/youtube.svg`
             },
             {
                 title: "CSSGrid",
