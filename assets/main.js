@@ -1,34 +1,34 @@
-import { shortcutSegments } from '../data/data.js';
+import { shortcutSegments } from './../data/data.js';
 
-function renderCards() {
-    const container = document.querySelector('.cards');
+function renderBentoGrid() {
+    const container = document.getElementById('bento-container');
     if (!container) return;
 
-    const html = shortcutSegments.map(segment => `
-        <article class="card" data-segment="${segment.id}">
-            <div class="shortcuts-grid">
-                ${segment.shortcuts.map(shortcut => {
-        // El if debe estar fuera del template string
-        if (shortcut.url === 'separador') {
-            return `<div class="separator">
-                        ${shortcut.title}
-                    </div>`;
-        } else {
-            return `
-                            <a href="${shortcut.url}" target="_blank" rel="noopener noreferrer" class="shortcut" title="${shortcut.title}">
-                                <img class="icon" src="${shortcut.icon}" alt="${shortcut.title}">
-                                <div class="info">
-                                    <span class="title">${shortcut.title}</span>
-                                </div>
-                            </a>
-                        `;
-        }
-    }).join('')}
+    // Mapeo de doble nivel: Segmentos -> Categorías -> Links
+    const html = shortcutSegments.map(segment => {
+        const categoriesHtml = segment.categories.map(cat => `
+            <div class="category-group">
+                <h3 class="category-title">${cat.title}</h3>
+                <div class="shortcuts-grid">
+                    ${cat.links.map(link => `
+                        <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="shortcut-item" title="${link.title}">
+                            <img class="icon" src="${link.icon}" alt="${link.title}" onerror="this.src='./assets/icono.png'">
+                            <span class="title">${link.title}</span>
+                        </a>
+                    `).join('')}
+                </div>
             </div>
-        </article>
-    `).join('');
+        `).join('');
+
+        return `
+            <article class="bento-card">
+                <h2 class="segment-title">${segment.name}</h2>
+                ${categoriesHtml}
+            </article>
+        `;
+    }).join('');
 
     container.innerHTML = html;
 }
 
-document.addEventListener('DOMContentLoaded', renderCards);
+document.addEventListener('DOMContentLoaded', renderBentoGrid);

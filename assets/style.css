@@ -1,126 +1,205 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap');
+
+:root {
+    --bg-base: #0A0A0A;
+    --accent-purple: #8B00FF;
+    --accent-emerald: #2ecc71;
+    --glass-bg: rgba(14, 21, 36, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --glass-hover: rgba(46, 204, 113, 0.1);
+    --text-main: #FFFFFF;
+    --text-muted: #8F8888;
+}
 
 body,
 html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Nunito", sans-serif;
-    background-color: #0A0A0A;
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Efecto de orbes de luz en el fondo para profundidad */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    animation: float 10s infinite alternate ease-in-out;
+}
+
+.glow-orb.purple {
+    top: -10%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: var(--accent-purple);
+}
+
+.glow-orb.emerald {
+    bottom: -10%;
+    right: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: var(--accent-emerald);
+    animation-delay: -5s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50px, 50px);
+    }
 }
 
 .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+header {
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    color: var(--accent-purple);
+    font-size: 2.5rem;
+    margin: 0 0 0.2rem 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+header p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Arquitectura Bento Grid */
+.bento-grid {
+    display: grid;
+    /* auto-fit asegura que las tarjetas se adapten al ancho sin romper el layout */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+    grid-auto-rows: min-content;
+}
+
+/* Tarjetas Glassmorphism */
+.bento-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(139, 0, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.segment-title {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin: 0;
+    font-weight: 700;
+}
+
+.category-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.category-title {
+    font-size: 0.75rem;
+    color: var(--accent-emerald);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-weight: 800;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.5rem;
+}
+
+.shortcuts-grid {
+    display: grid;
+    /* Evita el ancho fijo de 80px. Usa minmax para fluidez */
+    grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));
+    gap: 0.6rem;
+}
+
+.shortcut-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
-
-    h1 {
-        font-size: 2rem;
-        margin: 0;
-        color: #8B00FF;
-    }
-
-    p {
-        font-size: 0.9rem;
-        margin: 0;
-        color: #FFFFFF;
-    }
-
-    .cards {
-        margin-top: 3rem;
-        width: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 2px;
-
-        .card {
-            width: 98%;
-            background-color: #0e1524;
-            border-radius: 20px;
-            padding: 0.2rem 1rem;
-            min-width: 0;
-
-            .shortcuts-grid {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 14px;
-                padding: 10px;
-
-                .separator {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 80px;
-                    color: #2ecc71;
-                    margin-left: 15px;
-                }
-
-                a {
-                    width: 80px;
-                    /* Tamaño fijo */
-                    flex-shrink: 0;
-                    /* Evita que se encojan */
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-decoration: none;
-                    padding: 0.5rem;
-                    border: 1px solid #363c47;
-                    background-color: #161515;
-                    box-shadow: 0 0 10px #000000;
-                    border-radius: 20px;
-                    transition: all 0.3s ease-in-out;
-
-
-                    img.icon {
-                        width: 28px;
-                        height: 28px;
-                        object-fit: contain;
-                        transition: all 0.3s ease-in-out;
-                    }
-
-                    .info .title {
-                        color: rgb(143, 136, 136);
-                        margin-top: 6px;
-                        /* Añadido para que no esté pegado al ícono */
-                        text-align: center;
-                        font-size: 0.6rem;
-                        text-transform: capitalize;
-                    }
-
-                    &:hover {
-                        background-color: #232831;
-                        border-color: #2ecc71;
-                        box-shadow: 0 0 10px #2ecc71;
-                        color: #2ecc71;
-                        transform: scale(1.1);
-
-                        .icon svg {
-                            background-color: #2ecc71;
-                            color: #ffffff;
-                        }
-
-                        .info .title {
-                            color: #2ecc71;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    justify-content: flex-start;
+    gap: 0.6rem;
+    text-decoration: none;
+    padding: 0.8rem 0.4rem;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
 }
 
-footer {
+.shortcut-item:hover {
+    background: var(--glass-hover);
+    border-color: var(--accent-emerald);
+    box-shadow: 0 5px 15px var(--glass-hover);
+    transform: scale(1.05);
+}
+
+.shortcut-item img.icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    transition: transform 0.2s ease;
+}
+
+.shortcut-item:hover img.icon {
+    transform: translateY(-2px);
+}
+
+.shortcut-item span.title {
+    color: var(--text-muted);
+    font-size: 0.65rem;
     text-align: center;
-    padding: 1rem 1rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    width: 100%;
+    /* Truncamiento de texto elegante para nombres largos */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-footer p {
-    font-size: 0.85rem;
-    color: rgb(115, 115, 115);
-    margin: 0;
+.shortcut-item:hover span.title {
+    color: var(--accent-emerald);
 }
